@@ -51,48 +51,48 @@ var config = {
 };
 
 gulp.task('html:build', function () {
-    gulp.src(path.src.html) //Выберем файлы по нужному пути
+    gulp.src(path.app.html) //Выберем файлы по нужному пути
         .pipe(rigger()) //Прогоним через rigger
-        .pipe(gulp.dest(path.build.html)) //Выплюнем их в папку build
+        .pipe(gulp.dest(path.dist.html)) //Выплюнем их в папку dist
         .pipe(reload({stream: true})); //И перезагрузим наш сервер для обновлений
 });
 
 gulp.task('js:build', function () {
-    gulp.src(path.src.js) //Найдем наш main файл
+    gulp.src(path.app.js) //Найдем наш main файл
         .pipe(rigger()) //Прогоним через rigger
         .pipe(sourcemaps.init()) //Инициализируем sourcemap
         .pipe(uglify()) //Сожмем наш js
         .pipe(sourcemaps.write()) //Пропишем карты
-        .pipe(gulp.dest(path.build.js)) //Выплюнем готовый файл в build
+        .pipe(gulp.dest(path.dist.js)) //Выплюнем готовый файл в dist
         .pipe(reload({stream: true})); //И перезагрузим сервер
 });
 
 gulp.task('style:build', function () {
-    gulp.src(path.src.style) //Выберем наш main.scss
+    gulp.src(path.app.style) //Выберем наш main.scss
         .pipe(sourcemaps.init()) //То же самое что и с js
         .pipe(sass()) //Скомпилируем
         .pipe(prefixer()) //Добавим вендорные префиксы
         .pipe(cssmin()) //Сожмем
         .pipe(sourcemaps.write())
-        .pipe(gulp.dest(path.build.css)) //И в build
+        .pipe(gulp.dest(path.dist.css)) //И в dist
         .pipe(reload({stream: true}));
 });
 
 gulp.task('image:build', function () {
-    gulp.src(path.src.img) //Выберем наши картинки
+    gulp.src(path.app.img) //Выберем наши картинки
         .pipe(cache(imagemin({ //Сожмем их
             progressive: true,
             svgoPlugins: [{removeViewBox: false}],
             use: [pngquant()],
             interlaced: true
         })))
-        .pipe(gulp.dest(path.build.img)) //И бросим в build
+        .pipe(gulp.dest(path.dist.img)) //И бросим в dist
         .pipe(reload({stream: true}));
 });
 
 gulp.task('fonts:build', function() {
-    gulp.src(path.src.fonts)
-        .pipe(gulp.dest(path.build.fonts))
+    gulp.src(path.app.fonts)
+        .pipe(gulp.dest(path.dist.fonts))
 });
 
 gulp.task('build', [
