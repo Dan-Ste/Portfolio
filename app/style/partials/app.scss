@@ -1,3 +1,6 @@
-.content {
-	background-color: #000;
+*, *:after, *:before {
+	box-sizing: border-box;
+}
+img {
+	max-width: 100%;
 }

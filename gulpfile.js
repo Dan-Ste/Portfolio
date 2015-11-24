@@ -19,14 +19,18 @@ var path = {
     dist: { //Тут мы укажем куда складывать готовые после сборки файлы
         html: 'dist/',
         js: 'dist/js/',
-        css: 'dist/css/',
+        css: {
+            index: 'dist/css/index/'
+        },
         img: 'dist/img/',
         fonts: 'dist/fonts/'
     },
     app: { //Пути откуда брать исходники
-        html: 'app/*.html', //Синтаксис app/*.html говорит gulp что мы хотим взять все файлы с расширением .html
+        html: 'app/pages/*.html', //Синтаксис *.html говорит gulp что мы хотим взять все файлы с расширением .html
         js: 'app/js/main.js',//В стилях и скриптах нам понадобятся только main файлы
-        style: 'app/style/main.scss',
+        style: {
+            index: 'app/style/pages/index/main.scss'
+        },
         img: 'app/img/**/*.+(png|jpg|jpeg|gif|svg)', //Синтаксис img/**/*.* означает - взять все файлы всех расширений из папки и из вложенных каталогов
         fonts: 'app/fonts/**/*.*'
     },
@@ -44,7 +48,7 @@ var config = {
     server: {
         baseDir: "./dist"
     },
-    tunnel: true,
+    // tunnel: true,
     host: 'localhost',
     port: 9000,
     logPrefix: "burn"
@@ -67,15 +71,19 @@ gulp.task('js:build', function () {
         .pipe(reload({stream: true})); //И перезагрузим сервер
 });
 
-gulp.task('style:build', function () {
-    gulp.src(path.app.style) //Выберем наш main.scss
+var buildingStyles = function(pathTo) {
+  return gulp.src(pathTo.app) //Выберем наш main.scss
         .pipe(sourcemaps.init()) //То же самое что и с js
         .pipe(sass()) //Скомпилируем
         .pipe(prefixer()) //Добавим вендорные префиксы
         .pipe(cssmin()) //Сожмем
         .pipe(sourcemaps.write())
-        .pipe(gulp.dest(path.dist.css)) //И в dist
+        .pipe(gulp.dest(pathTo.dist)) //И в dist
         .pipe(reload({stream: true}));
+}
+
+gulp.task('style:build', function () {
+    buildingStyles({app: path.app.style.index, dist: path.dist.css.index}); // Стили для домашней страницы
 });
 
 gulp.task('image:build', function () {
