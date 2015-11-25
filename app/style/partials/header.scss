@@ -1,0 +1,39 @@
+.main-header {
+	position: absolute;
+	z-index: 10000;
+	width: 100%;
+	height: 97px;
+	background: url(../../img/bg-header.png) repeat-x;
+	border-bottom: 7px solid white;
+	box-shadow: 0 1px rgba(0,0,0,0.1);
+	.wrapper-header {
+		max-width: 1280px;
+		margin: 0 auto;
+		padding: 0 40px;
+	}
+	.fl {
+		.logo {
+			box-sizing: inherit;
+			width: 95px;
+			margin: 10px 0 9px 0;
+			img {
+				vertical-align: bottom;
+			}
+		}
+	}
+	.fr {
+		.social {
+			padding: 25px 0;
+			a {
+				margin-right: 14px;
+				&:last-child {
+					margin: 0;
+				}
+				i {
+					vertical-align: bottom;
+					display: inline-block;
+				}
+			}
+		}
+	}
+}

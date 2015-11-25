@@ -1,6 +1,104 @@
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
+html, body {
+	height: 100%;
+}
+body {
+	font-family: 'open_sansregular', sans-serif;
+	font-size: 62.5%;
+}
+.container-fluid {
+	position:relative;
+	min-height:100%;
+	height:auto!important;
+	overflow:hidden;
+	padding-top: 97px;
+	background: url(../../img/bg-main.jpg) no-repeat center center;
+	background-size: cover;
+	&:after {
+	content: "";
+	height: 80px;
+	display: block;
+	}
+}
+.container {
+	width: 960px;
+	margin: 0 auto;
+	padding-top: 35px;
+}
+.fl {
+	float: left;
+}
+.fr {
+	float: right;
+}
 *, *:after, *:before {
 	box-sizing: border-box;
 }
 img {
 	max-width: 100%;
+}
+a {
+	text-decoration: none;
+}
+
+.card {
+		border-top-left-radius: 6px;
+		border-top-right-radius: 6px;
+		overflow: hidden;
+	.info {
+		box-sizing: content-box;
+		position: relative;
+		background-image: linear-gradient( to top, #f0eeed, #fafaf9);
+		box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.1),inset 3px 5.196px 6px 0px rgba(255, 255, 255, 0.004);
+		padding: 35px 40px;
+		border-bottom-left-radius: 6px;
+		border-bottom-right-radius: 6px;
+		border: 1px solid #b6b6b6;
+		border-top: none;
+	  }
+	.wrapper-title {
+		width: 100%;
+		background-image: linear-gradient( to top, #7b7979, #a9a7a7);
+		box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.3);
+		border-width: 1px;
+		border-style: solid;
+		border-image: linear-gradient(to top, #636363, #9c9c9c) 1 10%;
+		border-top-left-radius: 6px;
+		border-top-right-radius: 6px;
+		.title-info {
+			margin: 0;
+			padding: 15px 0 19px 42px;
+			font-size: 2.4em;
+			font-weight: 600;
+			color: #eeedec;
+			line-height: 0.917;
+			text-align: left;
+			text-shadow: 0px 1px 1px #666565;
+		}
+	}
 }
