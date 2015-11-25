@@ -1,134 +1,230 @@
 .content {
-    width: 650px;
-    .info {
-        margin-bottom: 35px;
-    }
+	width: 650px;
+	.info {
+		margin-bottom: 35px;
+	}
 }
 .sidebar {
-    width: 250px;
-    margin-right: 710px;
+	width: 250px;
+	margin-right: 710px;
+}
+
+.about {
+	.wrapper-avatar {
+		display: inline-block;
+		vertical-align: middle;
+		width: 24.7%;
+		.avatar {
+			width: 135px;
+			height: 135px;
+			padding: 10px;
+			border-radius: 50%;
+			box-shadow: 0 0 2px rgba(121, 121, 121, 0.8);
+			background-image: linear-gradient( to top, #f3f2f0, #f6f5f5);
+			overflow: hidden;
+			img {
+				border-radius: 50%;
+			}
+		}
+	}
+	.whoami {
+		display: inline-block;
+		vertical-align: middle;
+		width: 68.4%;
+		margin-left: 35px;
+		font-size: 14px;
+		font-size: 1.4rem;
+		.left, .right {
+			display: inline-block;
+			vertical-align: top;
+		}
+		.left {
+			margin-right: 5px;
+		}
+		li {
+			margin-bottom: 10px;
+		}
+		.skills {
+			display: inline-block;
+			position: relative;
+			margin: 0;
+			margin-top: 10px;
+			.right {
+				float: right;
+				width: 230px;
+			}
+		}
+	}
 }
 
 
+.info {
+	.list {
+		position: relative;
+		padding: 20px 0;
+		&:first-child {
+			padding-top: 0;
+		}
+		&:last-child {
+			padding-bottom: 0;
+			&:after {
+				display: none;
+			}
+		}
+		&:after {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			height: 2px;
+			width: 100%;
+			background: #edeceb;
+			box-shadow: inset 0 1px 0 rgba(128, 128, 128, 0.29), 0 0 2px 2px rgba(251,251,251, 0.75);
+		}
+	}
+	p {
+		margin: 0;
+	}
+	.icon, .descr {
+		display: inline-block;
+		vertical-align: middle;
+	}
+	.descr {
+		width: 83%;
+		margin-left: -4px;
+	}
+	.icon {
+		margin-right: 40px;
+	}
+}
+
+.exp {
+	font-size: 14px;
+	font-size: 1.4em;
+}
+.graduate {
+	font-size: 15px;
+	font-size: 1.5em;
+}
 
 .sprite {
-    background-image: url(../../img/icons_index.png);
-    background-repeat: no-repeat;
-    display: inline-block;
+	background-image: url(../../img/icons_index.png);
+	background-repeat: no-repeat;
+	display: inline-block;
 }
 
 .sprite-circle-insert {
-    width: 54px;
-    height: 55px;
-    background-position: -5px -5px;
+	width: 54px;
+	height: 55px;
+	background-position: -5px -5px;
 }
 
 .sprite-icon-case {
-    width: 53px;
-    height: 55px;
-    background-position: -69px -5px;
+	width: 53px;
+	height: 55px;
+	background-position: -69px -5px;
 }
 
 .sprite-icon-curve {
-    width: 10px;
-    height: 38px;
-    background-position: -132px -5px;
+	width: 10px;
+	height: 38px;
+	background-position: -132px -5px;
 }
 
 .sprite-icon-fb {
-    width: 38px;
-    height: 40px;
-    background-position: -152px -5px;
+	width: 38px;
+	height: 40px;
+	background-position: -152px -5px;
 }
 
 .sprite-icon-fb:hover {
-    width: 38px;
-    height: 40px;
-    background-position: -132px -55px;
+	width: 38px;
+	height: 40px;
+	background-position: -132px -55px;
 }
 
 .sprite-icon-file {
-    width: 53px;
-    height: 55px;
-    background-position: -5px -105px;
+	width: 53px;
+	height: 55px;
+	background-position: -5px -105px;
 }
 
 .sprite-icon-gh {
-    width: 38px;
-    height: 40px;
-    background-position: -68px -105px;
+	width: 38px;
+	height: 40px;
+	background-position: -68px -105px;
 }
 
 .sprite-icon-gh:hover {
-    width: 38px;
-    height: 40px;
-    background-position: -116px -105px;
+	width: 38px;
+	height: 40px;
+	background-position: -116px -105px;
 }
 
 .sprite-icon-graduate {
-    width: 53px;
-    height: 55px;
-    background-position: -200px -5px;
+	width: 53px;
+	height: 55px;
+	background-position: -200px -5px;
 }
 
 .sprite-icon-letter {
-    width: 17px;
-    height: 13px;
-    background-position: -5px -70px;
+	width: 17px;
+	height: 13px;
+	background-position: -5px -70px;
 }
 
 .sprite-icon-lock {
-    width: 24px;
-    height: 22px;
-    background-position: -32px -70px;
+	width: 24px;
+	height: 22px;
+	background-position: -32px -70px;
 }
 
 .signIn:hover {
-    .sprite-icon-lock {
-        width: 24px;
-        height: 22px;
-        background-position: -61px -70px;
-    }
+	.sprite-icon-lock {
+		width: 24px;
+		height: 22px;
+		background-position: -61px -70px;
+	}
 }
 
 .sprite-icon-pen {
-    width: 53px;
-    height: 55px;
-    background-position: -180px -70px;
+	width: 53px;
+	height: 55px;
+	background-position: -180px -70px;
 }
 
 .sprite-icon-phone {
-    width: 17px;
-    height: 22px;
-    background-position: -95px -70px;
+	width: 17px;
+	height: 22px;
+	background-position: -95px -70px;
 }
 
 .sprite-icon-skype {
-    width: 20px;
-    height: 20px;
-    background-position: -243px -70px;
+	width: 20px;
+	height: 20px;
+	background-position: -243px -70px;
 }
 
 .sprite-icon-tw {
-    width: 38px;
-    height: 40px;
-    background-position: -164px -135px;
+	width: 38px;
+	height: 40px;
+	background-position: -164px -135px;
 }
 
 .sprite-icon-tw:hover {
-    width: 38px;
-    height: 40px;
-    background-position: -212px -135px;
+	width: 38px;
+	height: 40px;
+	background-position: -212px -135px;
 }
 
 .sprite-icon-vk {
-    width: 38px;
-    height: 40px;
-    background-position: -5px -185px;
+	width: 38px;
+	height: 40px;
+	background-position: -5px -185px;
 }
 
 .sprite-icon-vk:hover {
-    width: 38px;
-    height: 40px;
-    background-position: -53px -185px;
+	width: 38px;
+	height: 40px;
+	background-position: -53px -185px;
 }
