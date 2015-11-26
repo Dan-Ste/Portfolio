@@ -12,8 +12,7 @@ var gulp = require('gulp'),
     pngquant = require('imagemin-pngquant'),
     rimraf = require('rimraf'),
     browserSync = require("browser-sync"),
-    reload = browserSync.reload,
-    cache = require('gulp-cache');
+    reload = browserSync.reload;
 
 var path = {
     dist: { //Тут мы укажем куда складывать готовые после сборки файлы
@@ -48,7 +47,8 @@ var config = {
     server: {
         baseDir: "./dist"
     },
-    // tunnel: true,
+    online: true,
+    tunnel: true,
     host: 'localhost',
     port: 9000,
     logPrefix: "burn"
@@ -88,12 +88,12 @@ gulp.task('style:build', function () {
 
 gulp.task('image:build', function () {
     gulp.src(path.app.img) //Выберем наши картинки
-        .pipe(cache(imagemin({ //Сожмем их
+        .pipe(imagemin({ //Сожмем их
             progressive: true,
             svgoPlugins: [{removeViewBox: false}],
             use: [pngquant()],
             interlaced: true
-        })))
+        }))
         .pipe(gulp.dest(path.dist.img)) //И бросим в dist
         .pipe(reload({stream: true}));
 });

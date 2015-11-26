@@ -50,9 +50,9 @@ body {
 	}
 }
 .container {
-	width: 960px;
+	width: 1040px;
 	margin: 0 auto;
-	padding-top: 35px;
+	padding: 35px 40px 0 40px;
 }
 .fl {
 	float: left;
@@ -76,7 +76,7 @@ ul {
 }
 strong, h1, h2, h3, h4, h5, h6  {
 	font-family: 'open_sanssemibold', sans-serif;
-	font-weight: normal;
+	font-weight: 400;
 	font-style: normal;
 }
 
