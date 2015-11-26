@@ -80,7 +80,7 @@ var buildingStyles = function(pathTo) {
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(pathTo.dist)) //И в dist
         .pipe(reload({stream: true}));
-}
+};
 
 gulp.task('style:build', function () {
     buildingStyles({app: path.app.style.index, dist: path.dist.css.index}); // Стили для домашней страницы
@@ -103,12 +103,19 @@ gulp.task('fonts:build', function() {
         .pipe(gulp.dest(path.dist.fonts))
 });
 
+
+gulp.task('vendor:build', function() {
+    gulp.src('bower/modernizr/modernizr.js')
+        .pipe(gulp.dest('dist/js/vendor/'));
+});
+
 gulp.task('build', [
     'html:build',
     'js:build',
     'style:build',
     'fonts:build',
-    'image:build'
+    'image:build',
+    'vendor:build'
 ]);
 
 gulp.task('watch', function(){

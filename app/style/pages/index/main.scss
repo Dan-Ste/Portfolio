@@ -1,7 +1,7 @@
 /*
 * Third Party
 */
-@import "../../../../bower_components/normalize.css/normalize.css";
+@import "../../../../bower/normalize.css/normalize.css";
 
 /*
 * Custom
@@ -9,5 +9,7 @@
 @import "../../partials/font";
 @import "index";
 @import "../../partials/app";
+@import "../../partials/sprite";
 @import "../../partials/header";
+@import "../../partials/sidebar";
 @import "../../partials/footer";
