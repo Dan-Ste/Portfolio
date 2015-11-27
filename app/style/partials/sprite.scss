@@ -1,121 +1,151 @@
 .sprite {
-	background-image: url(../../img/icons_index.png);
-	background-repeat: no-repeat;
-	display: inline-block;
+    background-image: url(../../img/icons-sprite.png);
+    background-repeat: no-repeat;
+    display: inline-block;
 }
 
-.sprite-circle-insert {
-	width: 54px;
-	height: 55px;
-	background-position: -5px -5px;
+.sprite-iCloud-down {
+    width: 25px;
+    height: 18px;
+    background-position: -5px -5px;
 }
 
 .sprite-icon-case {
-	width: 53px;
-	height: 55px;
-	background-position: -69px -5px;
+    width: 53px;
+    height: 55px;
+    background-position: -40px -5px;
+}
+
+.sprite-icon-close {
+    width: 14px;
+    height: 14px;
+    background-position: -103px -5px;
+}
+
+.sprite-icon-cloud {
+    width: 25px;
+    height: 18px;
+    background-position: -127px -5px;
 }
 
 .sprite-icon-curve {
-	width: 10px;
-	height: 38px;
-	background-position: -132px -5px;
+    width: 10px;
+    height: 38px;
+    background-position: -162px -5px;
+}
+
+.sprite-icon-email {
+    width: 23px;
+    height: 17px;
+    background-position: -182px -5px;
 }
 
 .sprite-icon-fb {
-	width: 38px;
-	height: 40px;
-	background-position: -152px -5px;
+    width: 38px;
+    height: 40px;
+    background-position: -103px -53px;
 }
 
 .sprite-icon-fb:hover {
-	width: 38px;
-	height: 40px;
-	background-position: -132px -55px;
+    width: 38px;
+    height: 40px;
+    background-position: -151px -53px;
 }
 
 .sprite-icon-file {
-	width: 53px;
-	height: 55px;
-	background-position: -5px -105px;
+    width: 53px;
+    height: 55px;
+    background-position: -5px -103px;
 }
 
 .sprite-icon-gh {
-	width: 38px;
-	height: 40px;
-	background-position: -68px -105px;
+    width: 38px;
+    height: 40px;
+    background-position: -68px -103px;
 }
 
 .sprite-icon-gh:hover {
-	width: 38px;
-	height: 40px;
-	background-position: -116px -105px;
+    width: 38px;
+    height: 40px;
+    background-position: -116px -103px;
 }
 
 .sprite-icon-graduate {
-	width: 53px;
-	height: 55px;
-	background-position: -200px -5px;
+    width: 53px;
+    height: 55px;
+    background-position: -164px -103px;
+}
+
+.sprite-icon-key {
+    width: 22px;
+    height: 20px;
+    background-position: -5px -168px;
 }
 
 .sprite-icon-letter {
-	width: 17px;
-	height: 13px;
-	background-position: -5px -70px;
+    width: 17px;
+    height: 13px;
+    background-position: -199px -32px;
 }
 
 .sprite-icon-lock {
-	width: 24px;
-	height: 22px;
-	background-position: -32px -70px;
+    width: 19px;
+    height: 22px;
+    background-position: -5px -55px;
 }
 
 .signIn:hover {
 	.sprite-icon-lock {
 		width: 24px;
-		height: 22px;
-		background-position: -61px -70px;
+    height: 22px;
+    background-position: -37px -168px;
 	}
 }
 
 .sprite-icon-pen {
-	width: 53px;
-	height: 55px;
-	background-position: -180px -70px;
+    width: 53px;
+    height: 55px;
+    background-position: -226px -5px;
 }
 
 .sprite-icon-phone {
-	width: 17px;
-	height: 22px;
-	background-position: -95px -70px;
+    width: 17px;
+    height: 22px;
+    background-position: -34px -70px;
+}
+
+.sprite-icon-picture {
+    width: 53px;
+    height: 55px;
+    background-position: -227px -70px;
 }
 
 .sprite-icon-skype {
-	width: 20px;
-	height: 20px;
-	background-position: -243px -70px;
+    width: 20px;
+    height: 20px;
+    background-position: -61px -70px;
 }
 
 .sprite-icon-tw {
-	width: 38px;
-	height: 40px;
-	background-position: -164px -135px;
+    width: 38px;
+    height: 40px;
+    background-position: -227px -135px;
 }
 
 .sprite-icon-tw:hover {
-	width: 38px;
-	height: 40px;
-	background-position: -212px -135px;
+    width: 38px;
+    height: 40px;
+    background-position: -71px -185px;
 }
 
 .sprite-icon-vk {
-	width: 38px;
-	height: 40px;
-	background-position: -5px -185px;
+    width: 38px;
+    height: 40px;
+    background-position: -119px -185px;
 }
 
 .sprite-icon-vk:hover {
-	width: 38px;
-	height: 40px;
-	background-position: -53px -185px;
+    width: 38px;
+    height: 40px;
+    background-position: -167px -185px;
 }

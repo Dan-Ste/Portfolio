@@ -1,0 +1,66 @@
+/* Content */
+
+.card.my-works {
+	.info {
+		min-height: 780px;
+		padding-right: 25px;
+		padding-left: 25px;
+	}
+}
+.ticket-work {
+	display: inline-block;
+	vertical-align: top;
+	text-align: center;
+	width: 164px;
+	margin: -3px 15px 50px 15px;
+	border-width: 1px;
+	border-style: solid;
+	border-right-color: #bbbbbb;
+	border-bottom-color: #c5c5c5;
+	border-left-color: #d0d0d0;
+	border-top-color: #adadad;
+	border-radius: 5px;
+	overflow: hidden;
+	color: #727070;
+	background-image: linear-gradient( to top, rgb(237,235,234) 0%, rgb(251,249,249) 94%, rgb(255,255,255) 100%);
+	box-shadow: 0px 2px 1px 0px rgba(9, 9, 9, 0.07);
+	.figure {
+		height: 119px;
+		background: url(http://placepenguin.com/320/240) no-repeat center center;
+		background-size: cover;
+	}
+	.caption {
+		border-top: 1px solid #bdbdbd;
+		h4 {
+			font-size: 13px;
+			font-size: 1.3rem;
+			margin: 0;
+			background-color: #f2f2f2;
+			padding: 8px 12px;
+			box-shadow: inset 0px -1px 0px 0px rgba(255, 255, 255, 0.5);
+			text-shadow: 0.5px 0.866px 0px rgba(255, 255, 255, 0.75);
+		}
+		.text {
+			background-color: #FFF;
+			font-family: 'open_sanslight', sans-serif;
+			font-size: 12px;
+			font-size: 1.2rem;
+			line-height: 1.333;
+			padding: 8px 12px;
+		}
+	}
+}
+.ticket-work.add {
+	padding: 25px 8px;
+	
+	h4 {
+		margin: 0;
+		margin-top: 13px;
+		font-size: 14px;
+		font-size: 1.4rem;
+		text-shadow: 0.5px 0.866px 0px rgba(255, 255, 255, 0.75);
+	}
+	&:hover {
+		background-image: linear-gradient( to top, rgb(194,192,192) 0%, rgb(227,225,225) 87%, rgb(230,228,228) 90%, rgb(232,231,231) 100%);
+	}
+}

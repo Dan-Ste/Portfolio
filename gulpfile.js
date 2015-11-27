@@ -15,25 +15,29 @@ var gulp = require('gulp'),
     reload = browserSync.reload;
 
 var path = {
-    dist: { //Тут мы укажем куда складывать готовые после сборки файлы
+    dist: { //готовые после сборки файлы
         html: 'dist/',
         js: 'dist/js/',
         css: {
-            index: 'dist/css/index/'
+            index: 'dist/css/index/',
+            myWork: 'dist/css/my-work/',
+            feedback: 'dist/css/feedback/'
         },
         img: 'dist/img/',
         fonts: 'dist/fonts/'
     },
-    app: { //Пути откуда брать исходники
-        html: 'app/pages/*.html', //Синтаксис *.html говорит gulp что мы хотим взять все файлы с расширением .html
+    app: { //исходники
+        html: 'app/pages/*.html', // все файлы с расширением .html
         js: 'app/js/main.js',//В стилях и скриптах нам понадобятся только main файлы
         style: {
-            index: 'app/style/pages/index/main.scss'
+            index: 'app/style/pages/index/main.scss',
+            myWork: 'app/style/pages/my-work/main.scss',
+            feedback: 'app/style/pages/feedback/main.scss'
         },
-        img: 'app/img/**/*.+(png|jpg|jpeg|gif|svg)', //Синтаксис img/**/*.* означает - взять все файлы всех расширений из папки и из вложенных каталогов
+        img: 'app/img/**/*.+(png|jpg|jpeg|gif|svg)', //картинки всех расширений
         fonts: 'app/fonts/**/*.*'
     },
-    watch: { //Тут мы укажем, за изменением каких файлов мы хотим наблюдать
+    watch: { //Пути для слежки
         html: 'app/**/*.html',
         js: 'app/js/**/*.js',
         style: 'app/style/**/*.scss',
@@ -47,8 +51,8 @@ var config = {
     server: {
         baseDir: "./dist"
     },
-    online: true,
-    tunnel: true,
+    // online: true,
+    // tunnel: true,
     host: 'localhost',
     port: 9000,
     logPrefix: "burn"
@@ -84,17 +88,19 @@ var buildingStyles = function(pathTo) {
 
 gulp.task('style:build', function () {
     buildingStyles({app: path.app.style.index, dist: path.dist.css.index}); // Стили для домашней страницы
+    buildingStyles({app: path.app.style.myWork, dist: path.dist.css.myWork}); // Стили для страницы работ
+    buildingStyles({app: path.app.style.feedback, dist: path.dist.css.feedback}); // Стили для страницы обратной связи
 });
 
 gulp.task('image:build', function () {
-    gulp.src(path.app.img) //Выберем наши картинки
-        .pipe(imagemin({ //Сожмем их
+    gulp.src(path.app.img) 
+        .pipe(imagemin({ //Сжатие картинок
             progressive: true,
             svgoPlugins: [{removeViewBox: false}],
             use: [pngquant()],
             interlaced: true
         }))
-        .pipe(gulp.dest(path.dist.img)) //И бросим в dist
+        .pipe(gulp.dest(path.dist.img))
         .pipe(reload({stream: true}));
 });
 
