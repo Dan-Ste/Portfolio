@@ -50,49 +50,43 @@
 				margin-top: 1px;
 			}
 		}
-		.label {
-			position: relative;
-			display: inline-block;
-			vertical-align: top;
-			padding: 2px 6px 2px 4px;
-			margin: 0 10px 10px 5px;
-			font-family: 'open_sanssemibold', sans-serif;
-			font-size: 9px;
-			font-size: 0.9rem;
-			text-transform: uppercase;
-			color: #1E7465;
-			border: 1px solid #d5d5d5;
-			border-bottom-width: 2px;
-			border-left: none;
-			border-top-right-radius: 4px;
-			border-bottom-right-radius: 4px;
-			background: linear-gradient(to top, #e9e6e4 0%, #fbf9f9 94%, #ffffff 100%);
-			box-shadow: 0px 0px 1px 1px rgba(9, 9, 9, 0.07),inset 0px -2px 3px 0px rgba(41, 41, 41, 0.05);
-
-			&:before {
-				content: "";
-				position: absolute;
-				width: 9px;
-				height: 20px;
-				top: -2px;
-				left: -9px;
-				background: url(../../img/label.png) no-repeat center center;
-			}
-		}
+	}
+	.label {
+		position: relative;
+		display: inline-block;
+		vertical-align: top;
+		padding: 2px 6px 2px 4px;
+		margin: 0 10px 10px 5px;
+		font-family: 'open_sanssemibold', sans-serif;
+		font-size: 9px;
+		font-size: 0.9rem;
+		text-transform: uppercase;
+		color: #1E7465;
+		border: 1px solid #d5d5d5;
+		border-bottom-width: 2px;
+		border-left: none;
+		border-top-right-radius: 4px;
+		border-bottom-right-radius: 4px;
+		background-color: white;
+		background: linear-gradient(to top, #e9e6e4 0%, #fbf9f9 94%, #ffffff 100%);
+		box-shadow: 0px 0px 1px 1px rgba(9, 9, 9, 0.07),inset 0px -2px 3px 0px rgba(41, 41, 41, 0.05);
 	}
 }
-
-.button_back {
-  background-image: -moz-linear-gradient( 90deg, rgb(233,230,228) 0%, rgb(251,249,249) 94%, rgb(255,255,255) 100%);
-  background-image: -webkit-linear-gradient( 90deg, rgb(233,230,228) 0%, rgb(251,249,249) 94%, rgb(255,255,255) 100%);
-  background-image: -ms-linear-gradient( 90deg, rgb(233,230,228) 0%, rgb(251,249,249) 94%, rgb(255,255,255) 100%);
-  box-shadow: 0px 2px 1px 0px rgba(9, 9, 9, 0.07),inset 0px -2px 3px 0px rgba(41, 41, 41, 0.05);
-  position: absolute;
-  left: 903px;
-  top: 334px;
-  width: 47px;
-  height: 17px;
-  z-index: 81;
+.cssgradients .label {
+	&:before {
+		content: "";
+		position: absolute;
+		width: 9px;
+		height: 20px;
+		top: -2px;
+		left: -9px;
+		background: url(../../img/label.png) no-repeat center center;
+	}
+}
+.no-cssgradients .label {
+	border-radius: 4px;
+	border-left: 1px solid #d5d5d5;
+	margin-right: 5px;
 }
 
 .info {

@@ -23,16 +23,20 @@
 		display: block;
 	}
 	input, textarea {
+		font-size: 14px;
+		font-size: 1.4rem;
 		width: 100% !important;
 		border-radius: 3px;
 		box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.35),inset 0px 2px 2px 0px rgba(114, 112, 112, 0.1);
+		background-color: #f6f4f4;
 		background-image: linear-gradient( to top, rgb(245,245,245) 0%, rgba(251,249,249,0) 100%);
 		border: none;
 		border: 1px solid #d6d4d3;
-		padding: 11px 10px 12px 10px;
+		padding: 11px 10px 10px 10px;
 	}
 	textarea {
 		resize: none;
+		min-height: 180px;
 	}
 	::-webkit-input-placeholder {
 		color: #c7c6c6;
@@ -58,7 +62,12 @@
 		font-size: 1.2rem;
 		line-height: 1;
 	}
-	input[type="text"] {
+	.fake-captcha {
+		height: 78px;
+		background: url(http://placepenguin.com/200/80) no-repeat center center;
+		box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.35),inset 0px 2px 2px 0px rgba(114, 112, 112, 0.1);
+		border-radius: 3px;
+		border: 1px solid #d6d4d3;
 	}
 }
 
@@ -77,12 +86,13 @@
 	}
 }
 .button-row {
-	margin-top: 32px;
+	margin-top: 14px;
 	.btn-submit {
 		float: left;
 		width: 123px;
 		margin-left: 30px;
 		text-align: center;
+		background-color: #5bd6b8;
 		background-image: linear-gradient( to top, rgb(67,183,150) 0%, rgb(128,232,203) 100%);
 		box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.5), 0px 2px 1px 0px rgba(9, 9, 9, 0.16);
 		border-width: 1px;
@@ -106,6 +116,7 @@
 		width: 123px;
 		margin-right: 30px;
 		text-align: center;
+		background-color: #e6e4e3;
 		background-image: linear-gradient( to top, rgb(233,230,228) 0%, rgb(251,249,249) 94%, rgb(255,255,255) 100%);
 		box-shadow: 0px 2px 1px 0px rgba(9, 9, 9, 0.07), inset 0px -2px 3px 0px rgba(41, 41, 41, 0.05);border-width: 1px;
 		border-style: solid;

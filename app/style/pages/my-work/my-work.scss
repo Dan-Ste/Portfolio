@@ -61,6 +61,175 @@
 		text-shadow: 0.5px 0.866px 0px rgba(255, 255, 255, 0.75);
 	}
 	&:hover {
+		background-color: #eeeceb;
 		background-image: linear-gradient( to top, rgb(194,192,192) 0%, rgb(227,225,225) 87%, rgb(230,228,228) 90%, rgb(232,231,231) 100%);
 	}
 }
+
+
+.modal-add-project {
+	display: none;
+	position: relative;
+	width: 360px;
+	background-color: white;
+  background-image: linear-gradient( to top, #f0eeed 0%, #fbfbfa 100%);
+  box-shadow: 0px 11px 27px 0px rgba(159, 159, 159, 0.75),inset 0px 6px 6px 0px rgba(255, 255, 255, 0.004);
+  border: 1px solid #bfbfbf;
+  border-radius: 5px;
+	padding: 25px 20px;
+	color: #727070;
+	.popup-title {
+		position: absolute;
+		top: -26px;
+		h5 {
+			margin: 0;
+			font-family: 'open_sanslight', sans-serif;
+			font-size: 12px;
+			font-size: 1.4rem;
+			color: #f8f7f6;
+		}
+	}
+	.close-modal {
+		position: absolute;
+		top: 6px;
+		right: 6px;
+	}
+}
+
+
+.form-group {
+	margin-bottom: 18px;
+	label, input, textarea {
+		display: block;
+	}
+	input, textarea {
+		font-size: 14px;
+		font-size: 1.4rem;
+		width: 100%;
+		border-radius: 3px;
+		box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.35),inset 0px 2px 2px 0px rgba(114, 112, 112, 0.1);
+		background-color: #f6f4f4;
+		background-image: linear-gradient( to top, rgb(245,245,245) 0%, rgba(251,249,249,0) 100%);
+		border: none;
+		border: 1px solid #d6d4d3;
+		padding: 11px 10px 10px 10px;
+	}
+	textarea {
+		resize: none;
+		min-height: 180px;
+	}
+	::-webkit-input-placeholder {
+		color: #c7c6c6;
+		font-size: 12px;
+		font-size: 1.2rem;
+		line-height: 1.5;
+	}
+	:-moz-placeholder { /* Firefox 18- */
+		color: #c7c6c6;
+		font-size: 12px;
+		font-size: 1.2rem;
+		line-height: 1.5;
+	}
+	::-moz-placeholder {  /* Firefox 19+ */
+		color: #c7c6c6;
+		font-size: 12px;
+		font-size: 1.2rem;
+		line-height: 1.5;
+	}
+	:-ms-input-placeholder {
+		color: #c7c6c6;
+		font-size: 12px;
+		font-size: 1.2rem;
+		line-height: 1.5;
+	}
+	.fake-captcha {
+		height: 78px;
+		background: url(http://placepenguin.com/200/80) no-repeat center center;
+		box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.35),inset 0px 2px 2px 0px rgba(114, 112, 112, 0.1);
+		border-radius: 3px;
+		border: 1px solid #d6d4d3;
+	}
+}
+
+
+
+.file-upload {
+	.fake-input {
+		cursor: pointer;
+		color: #c7c6c6;
+		font-size: 12px;
+		font-size: 1.2rem;
+		float: left;
+		width: 268px;
+		padding-left: 10px;
+		padding-right: 10px;
+		border-top-left-radius: 3px;
+		border-bottom-left-radius: 3px;
+		box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.35),inset 0px 2px 2px 0px rgba(114, 112, 112, 0.1);
+		background-color: #f6f4f4;
+		background-image: linear-gradient( to top, rgb(245,245,245) 0%, rgba(251,249,249,0) 100%);
+		border: 1px solid #d6d4d3;
+		border-right: none;
+		height: 43px;
+		line-height: 41px;
+	}
+	.upload-file-container {
+		cursor: pointer;
+		float: right;
+		width: 50px;
+		border-top-right-radius: 3px;
+		border-bottom-right-radius: 3px;
+		border: none;
+		border: 1px solid #d6d4d3;
+		height: 43px;
+		background: url(../../img/icon-cloud.png);
+		background: url(../../img/icon-cloud.png), linear-gradient( to top, rgb(233,230,229) 0%, rgb(251,249,249) 94%, rgb(255,255,255) 100%);
+		background-repeat: no-repeat;
+		background-position: center center;
+		box-shadow: 0px 2px 1px 0px rgba(9, 9, 9, 0.07),inset 0px -2px 3px 0px rgba(41, 41, 41, 0.05);
+		.file-upload-input {
+			cursor: pointer;
+			filter: alpha(opacity=0);
+			opacity: 0;
+		}
+	}
+}
+
+
+label {
+	font-size: 14px;
+	font-size: 1.4rem;
+	margin-bottom: 8px;
+}
+
+.button-row {
+	text-align: center;
+}
+.btn-submit {
+	display: inline-block;
+	width: 123px;
+	text-align: center;
+	background-color: #5bd6b8;
+	background-image: linear-gradient( to top, rgb(67,183,150) 0%, rgb(128,232,203) 100%);
+	box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.5), 0px 2px 1px 0px rgba(9, 9, 9, 0.16);
+	border-width: 1px;
+	border-style: solid;
+	border-bottom-color: #34a282;
+	border-top-color: #6adbbc;
+	border-right-color: #44ac8f;
+	border-left-color: #44ac8f;
+	border-radius: 6px;
+	padding: 10px 0;
+	strong {
+		font-size: 14px;
+		font-size: 1.4rem;
+		text-align: left;
+		color: #1E7465;
+		text-shadow: 0.5px 0.866px 0px rgba(255, 255, 255, 0.75);
+	}
+}
+
+.error {
+  box-shadow: 0px 0px 2px 0 rgba(203, 105, 69, 0.7) !important;
+}
+

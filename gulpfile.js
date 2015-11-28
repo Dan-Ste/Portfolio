@@ -17,7 +17,9 @@ var gulp = require('gulp'),
 var path = {
     dist: { //готовые после сборки файлы
         html: 'dist/',
-        js: 'dist/js/',
+        js: {
+            myWork: 'dist/js/myWork/',
+        },
         css: {
             index: 'dist/css/index/',
             myWork: 'dist/css/my-work/',
@@ -28,7 +30,9 @@ var path = {
     },
     app: { //исходники
         html: 'app/pages/*.html', // все файлы с расширением .html
-        js: 'app/js/main.js',//В стилях и скриптах нам понадобятся только main файлы
+        js: {
+            myWork: 'app/js/pages/my-work/main.js',//В стилях и скриптах нам понадобятся только main файлы
+        },
         style: {
             index: 'app/style/pages/index/main.scss',
             myWork: 'app/style/pages/my-work/main.scss',
@@ -51,8 +55,8 @@ var config = {
     server: {
         baseDir: "./dist"
     },
-    // online: true,
-    // tunnel: true,
+    online: true,
+    tunnel: true,
     host: 'localhost',
     port: 9000,
     logPrefix: "burn"
@@ -65,16 +69,22 @@ gulp.task('html:build', function () {
         .pipe(reload({stream: true})); //И перезагрузим наш сервер для обновлений
 });
 
-gulp.task('js:build', function () {
-    gulp.src(path.app.js) //Найдем наш main файл
+// Собираем скрипты
+var buildingScripts = function(pathTo) {
+  return gulp.src(pathTo.app) //Найдем наш main файл
         .pipe(rigger()) //Прогоним через rigger
         .pipe(sourcemaps.init()) //Инициализируем sourcemap
         .pipe(uglify()) //Сожмем наш js
         .pipe(sourcemaps.write()) //Пропишем карты
-        .pipe(gulp.dest(path.dist.js)) //Выплюнем готовый файл в dist
+        .pipe(gulp.dest(pathTo.dist)) //Выплюнем готовый файл в dist
         .pipe(reload({stream: true})); //И перезагрузим сервер
+};
+
+gulp.task('js:build', function () {
+    buildingScripts({app: path.app.js.myWork, dist: path.dist.js.myWork});//Скрипты для страницы работ
 });
 
+// Собираем стили
 var buildingStyles = function(pathTo) {
   return gulp.src(pathTo.app) //Выберем наш main.scss
         .pipe(sourcemaps.init()) //То же самое что и с js
