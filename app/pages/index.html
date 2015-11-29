@@ -2,6 +2,7 @@
 <html>
 	<head lang="ru">
 		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Стешенко Даниил</title>
 		<link rel="stylesheet" type="text/css" href="css/index/main.css">
 		<link rel="stylesheet" type="text/css" media="(max-width: 1040px)" href="css/index/tablet.css">
@@ -9,12 +10,37 @@
 		<script src="js/vendor/modernizr.js"></script>
 	</head>
 	<body>
-
-		//= ../template/header.html
-
-		<div class="container-fluid">
-			<div class="container cf">
-				<main class="content fr">
+		<header class="main-header">
+			<div class="wrapper-header cf">
+				<div class="fl">
+					<div class="logo"><a href=""><img src="img/logo.png" alt="LoftSchool"></a></div>
+				</div>
+				<div class="fr">
+					<div class="social">
+						<a href="https://www.facebook.com/profile.php?id=100009009076066" target="_blank"><i class="sprite sprite-icon-fb"></i></a>
+						<a href="http://vk.com/steshenkoden" target="_blank"><i class="sprite sprite-icon-vk"></i></a>
+						<a href="https://twitter.com/SteshenkoDan" target="_blank"><i class="sprite sprite-icon-tw"></i></a>
+						<a href="https://github.com/Dan-Ste" target="_blank"><i class="sprite sprite-icon-gh"></i></a>
+					</div>
+					<div class="burger-menu" id="burger-menu">
+						<nav class="burger-nav" id="burger-nav">
+							<ul class="nav">
+								<li><a href="index.html" class="item item-green item-active"><h2 class="title-list">Обо мне</h2></a></li>
+								<li><a href="my-work.html" class="item"><h2 class="title-list">Мои Работы</h2></a></li>
+								<li><a href="feedback.html" class="item"><h2 class="title-list">Обратная связь</h2></a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+			</header><!-- /header -->
+			
+			<!--[if lt IE 7]>
+			<p class="chromeframe">Вы используете <strong>устаревший</strong> браузер. Пожалуйста <a href="http://browsehappy.com/">обновите свой барузер</a> или <a href="http://www.google.com/chromeframe/?redirect=true">активируйте Google Chrome Frame</a> для корректного отображения сайта.</p>
+			<![endif]-->
+			<div class="container-fluid">
+				<div class="container cf">
+					<main class="content fr">
 					<section class="card about">
 						<div class="wrapper-title">
 							<h2 class="title-info">Основная информация</h2>
@@ -59,117 +85,114 @@
 								</ul>
 							</div>
 						</div>
-					</section><!-- end about -->
-					<section class="card exp">
-						<div class="wrapper-title">
-							<h2 class="title-info">Опыт работы</h2>
-						</div>
-						<div class="info">
-							<ul>
-								<li class="list">
-									<i class="icon sprite sprite-icon-case"></i>
-									<div class="descr">
-										<p><strong>"ИП Стешенко" - Частный предприниматель</strong></p>
-										<p>Сентябрь 2014 - Январь 2015</p>
+						</section><!-- end about -->
+						<section class="card exp">
+							<div class="wrapper-title">
+								<h2 class="title-info">Опыт работы</h2>
+							</div>
+							<div class="info">
+								<ul>
+									<li class="list">
+										<i class="icon sprite sprite-icon-case"></i>
+										<div class="descr">
+											<p><strong>"ИП Стешенко" - Частный предприниматель</strong></p>
+											<p>Сентябрь 2014 - Январь 2015</p>
+										</div>
+									</li>
+									<li class="list">
+										<i class="icon sprite sprite-icon-case"></i>
+										<div class="descr">
+											<p><strong>"ООО BYYD" - Front-end разработчик</strong></p>
+											<p>Апрель 2015 - Сентябрь 2015</p>
+										</div>
+									</li>
+									<li class="list">
+										<i class="icon sprite sprite-icon-case"></i>
+										<div class="descr">
+											<p><strong>"Объединенная торговая группа" - Front-end разработчик</strong></p>
+											<p>Октябрь 2015 - по настоящее время</p>
+										</div>
+									</li>
+								</ul>
+							</div>
+							</section><!-- end exp -->
+							<section class="card graduate">
+								<div class="wrapper-title">
+									<h2 class="title-info">Образование</h2>
+								</div>
+								<div class="info">
+									<ul>
+										<li class="list">
+											<i class="icon sprite sprite-icon-pen"></i>
+											<div class="descr">
+												<p><strong>Полное среднее. Математический класс МОУ СОШ №15, г.Кисловодск</strong></p>
+												<p>Сентябрь 1999 - Июнь 2009</p>
+											</div>
+										</li>
+										<li class="list">
+											<i class="icon sprite sprite-icon-picture"></i>
+											<div class="descr">
+												<p><strong>Художественная школа им.Ярошенко, г.Кисловодск</strong></p>
+												<p>Сентябрь 2003 - Июнь 2008</p>
+											</div>
+										</li>
+										<li class="list">
+											<i class="icon sprite sprite-icon-graduate"></i>
+											<div class="descr">
+												<p><strong>Высшее образование. Инженер. Специалист. ИТА ЮФУ (ТРТУ)</strong></p>
+												<p>Сентябрь 2009 - Июнь 2014</p>
+											</div>
+										</li>
+										<li class="list">
+											<i class="icon sprite sprite-icon-file"></i>
+											<div class="descr">
+												<p><strong>Курсы Loftschool.ru</strong></p>
+												<p>Ноябрь 2014 - по настоящее время</p>
+											</div>
+										</li>
+									</ul>
+								</div>
+								</section><!-- end graduate -->
+								</main><!-- end content -->
+								<aside class="sidebar">
+									<nav class="main-nav">
+										<ul class="nav">
+											<li><a href="index.html" class="item item-green item-active"><h2 class="title-list">Обо мне</h2></a></li>
+											<li><a href="my-work.html" class="item"><h2 class="title-list">Мои Работы</h2></a></li>
+											<li><a href="feedback.html" class="item"><h2 class="title-list">Обратная связь</h2></a></li>
+										</ul>
+									</nav>
+									<div class="contacts">
+										<ul class="contacts-list">
+											<li class="item item-orange item-active"><h2 class="title-list">Контакты</h2></li>
+											<li>
+												<a class="contact contact-email" href="mailto:dan.steshenko@gmail.com">
+													<i class="contact-icon sprite sprite-icon-letter"></i>
+													<i class="contact-icon sprite sprite-icon-curve"></i>
+													<span class="contact-text">dan.steshenko@gmail.com</span>
+												</a>
+											</li>
+											<li>
+												<a class="contact contact-phone" href="tel:+7(812)458-81-70">
+													<i class="contact-icon sprite sprite-icon-phone"></i>
+													<i class="contact-icon sprite sprite-icon-curve"></i>
+													<span class="contact-text">+79006350363</span>
+												</a>
+											</li>
+											<li>
+												<a class="contact contact-skype" href="skype:profile_name?fireburn26">
+													<i class="contact-icon sprite sprite-icon-skype"></i>
+													<i class="contact-icon sprite sprite-icon-curve"></i>
+													<span class="contact-text">fireburn26</span>
+												</a>
+											</li>
+										</ul>
 									</div>
-								</li>
-								<li class="list">
-									<i class="icon sprite sprite-icon-case"></i>
-									<div class="descr">
-										<p><strong>"ООО BYYD" - Front-end разработчик</strong></p>
-										<p>Апрель 2015 - Сентябрь 2015</p>
-									</div>
-								</li>
-								<li class="list">
-									<i class="icon sprite sprite-icon-case"></i>
-									<div class="descr">
-										<p><strong>"Объединенная торговая группа" - Front-end разработчик</strong></p>
-										<p>Октябрь 2015 - по настоящее время</p>
-									</div>
-								</li>
-							</ul>
-						</div>
-					</section><!-- end exp -->
-					<section class="card graduate">
-						<div class="wrapper-title">
-							<h2 class="title-info">Образование</h2>
-						</div>
-						<div class="info">
-							<ul>
-								<li class="list">
-									<i class="icon sprite sprite-icon-pen"></i>
-									<div class="descr">
-										<p><strong>Полное среднее. Математический класс МОУ СОШ №15, г.Кисловодск</strong></p>
-										<p>Сентябрь 1999 - Июнь 2009</p>
-									</div>
-								</li>
-								<li class="list">
-									<i class="icon sprite sprite-icon-picture"></i>
-									<div class="descr">
-										<p><strong>Художественная школа им.Ярошенко, г.Кисловодск</strong></p>
-										<p>Сентябрь 2003 - Июнь 2008</p>
-									</div>
-								</li>
-								<li class="list">
-									<i class="icon sprite sprite-icon-graduate"></i>
-									<div class="descr">
-										<p><strong>Высшее образование. Инженер. Специалист. ИТА ЮФУ (ТРТУ)</strong></p>
-										<p>Сентябрь 2009 - Июнь 2014</p>
-									</div>
-								</li>
-								<li class="list">
-									<i class="icon sprite sprite-icon-file"></i>
-									<div class="descr">
-										<p><strong>Курсы Loftschool.ru</strong></p>
-										<p>Ноябрь 2014 - по настоящее время</p>
-									</div>
-								</li>
-							</ul>
-						</div>
-					</section><!-- end graduate -->
-				</main><!-- end content -->
-				<aside class="sidebar">
-					<nav class="main-nav">
-						<ul class="nav">
-							<li><a href="index.html" class="item item-green item-active"><h2 class="title-list">Обо мне</h2></a></li>
-							<li><a href="my-work.html" class="item"><h2 class="title-list">Мои Работы</h2></a></li>
-							<li><a href="feedback.html" class="item"><h2 class="title-list">Обратная связь</h2></a></li>
-						</ul>
-					</nav>
-					<div class="contacts">
-						<ul class="contacts-list">
-							<li class="item item-orange item-active"><h2 class="title-list">Контакты</h2></li>
-							<li>
-								<a class="contact contact-email" href="mailto:dan.steshenko@gmail.com">
-									<i class="contact-icon sprite sprite-icon-letter"></i>
-									<i class="contact-icon sprite sprite-icon-curve"></i>
-									<span class="contact-text">dan.steshenko@gmail.com</span>
-								</a>
-								</li>
-							<li>
-							<a class="contact contact-phone" href="tel:+7(812)458-81-70">
-								<i class="contact-icon sprite sprite-icon-phone"></i>
-								<i class="contact-icon sprite sprite-icon-curve"></i>
-								<span class="contact-text">+79006350363</span>
-							</a>
-							</li>
-							<li>
-								<a class="contact contact-skype" href="skype:profile_name?fireburn26">
-									<i class="contact-icon sprite sprite-icon-skype"></i>
-									<i class="contact-icon sprite sprite-icon-curve"></i>
-									<span class="contact-text">fireburn26</span>
-								</a>
-							</li>
-						</ul>
-					</div>
-				</aside><!-- end sidebar -->
-
-			</div><!-- end container -->
-		</div><!-- end container-fluid -->
-	
-		//= ../template/footer.html
-
-		<script type="text/javascript" src="js/index/main.js"></script>
-
-	</body>
-</html>
+									</aside><!-- end sidebar -->
+									</div><!-- end container -->
+									</div><!-- end container-fluid -->
+									
+									//= ../template/footer.html
+									<script type="text/javascript" src="js/index/main.js"></script>
+								</body>
+							</html>

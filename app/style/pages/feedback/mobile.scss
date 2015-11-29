@@ -1,0 +1,30 @@
+@import "../../partials/header-mobile";
+@import "../../partials/app-mobile";
+@import "../../partials/footer-mobile";
+
+
+.form-wrapper {
+	width: auto;
+	max-width: 320px;
+	padding: 0 20px;
+}
+.form-row  {
+	.form-group {
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    &.left {
+    	margin-right: 0;
+    	margin-bottom: 18px;
+    }
+  }
+}
+.button-row {
+	.btn-submit, .btn-reset {
+		display: inline-block;
+		width: 50%;
+		max-width: 123px;
+		margin: 0;
+		margin-right: -4px;
+	}
+}

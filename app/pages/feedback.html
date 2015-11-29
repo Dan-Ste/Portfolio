@@ -2,90 +2,124 @@
 <html>
 	<head lang="ru">
 		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Стешенко Даниил</title>
 		<link rel="stylesheet" type="text/css" href="css/feedback/main.css">
+		<link rel="stylesheet" type="text/css" media="(max-width: 1040px)" href="css/feedback/tablet.css">
+		<link rel="stylesheet" type="text/css" media="(max-width: 720px)" href="css/feedback/mobile.css">
 		<script src="js/vendor/modernizr.js"></script>
 		<script src='https://www.google.com/recaptcha/api.js'></script>
 	</head>
 	<body>
-//= ../template/header.html
-<div class="container-fluid">
-	<div class="container cf">
-		<main class="content fr">
-			<section class="card feedback">
-				<div class="wrapper-title">
-					<h2 class="title-info">У вас интересный проект? Напишите мне</h2>
+		<header class="main-header">
+			<div class="wrapper-header cf">
+				<div class="fl">
+					<div class="logo"><a href=""><img src="img/logo.png" alt="LoftSchool"></a></div>
 				</div>
-				<div class="info">
-					<div class="form-wrapper">
-						<form id="form-feedback" action="" method="" accept-charset="utf-8">
-							<div class="form-row">
-								<div class="left form-group">
-									<label for="name">Имя</label>
-									<input id="name" type="text" name="name" placeholder="Как к Вам обращаться">
-								</div>
-								<div class="right form-group">
-									<label for="email">Email</label>
-									<input id="email" type="text" name="email" placeholder="Куда мне писать">
-								</div>
-							</div>
-							<div class="form-group">
-								<label for="message">Сообщение</label>
-								<textarea rows="8" name="message" id="message" placeholder="Кратко в чем суть"></textarea>
-							</div>
-							<div class="captcha-wrapper">
-								<div class="captcha">
-										<div class="g-recaptcha" data-sitekey="6Le3-hETAAAAAGEobmZu8Qnv0lluz2JeAX_Iyx0k"></div>
-								</div>
-							</div>
-							<div class="button-row cf">
-								<button class="btn-submit" id="submit-feedback" type="submit"><strong>Отправить</strong></button>
-								<button class="btn-reset" id="reset-feedback" type="reset"><strong>Очистить</strong></button>
-							</div>
-						</form>
+				<div class="fr">
+					<div class="social">
+						<a href="https://www.facebook.com/profile.php?id=100009009076066" target="_blank"><i class="sprite sprite-icon-fb"></i></a>
+						<a href="http://vk.com/steshenkoden" target="_blank"><i class="sprite sprite-icon-vk"></i></a>
+						<a href="https://twitter.com/SteshenkoDan" target="_blank"><i class="sprite sprite-icon-tw"></i></a>
+						<a href="https://github.com/Dan-Ste" target="_blank"><i class="sprite sprite-icon-gh"></i></a>
+					</div>
+					<div class="burger-menu" id="burger-menu">
+						<nav class="burger-nav" id="burger-nav">
+							<ul class="nav">
+								<li><a href="index.html" class="item "><h2 class="title-list">Обо мне</h2></a></li>
+								<li><a href="my-work.html" class="item"><h2 class="title-list">Мои Работы</h2></a></li>
+								<li><a href="feedback.html" class="item item-green item-active"><h2 class="title-list">Обратная связь</h2></a></li>
+							</ul>
+						</nav>
 					</div>
 				</div>
-				</section><!-- end about -->
-				</main><!-- end content -->
-				<aside class="sidebar">
-					<nav class="main-nav">
-						<ul class="nav">
-							<li><a href="index.html" class="item"><h2 class="title-list">Обо мне</h2></a></li>
-							<li><a href="my-work.html" class="item"><h2 class="title-list">Мои Работы</h2></a></li>
-							<li><a href="feedback.html" class="item item-green item-active"><h2 class="title-list">Обратная связь</h2></a></li>
-						</ul>
-					</nav>
-					<div class="contacts">
-						<ul class="contacts-list">
-							<li class="item item-orange item-active"><h2 class="title-list">Контакты</h2></li>
-							<li>
-								<a class="contact contact-email" href="mailto:dan.steshenko@gmail.com">
-									<i class="contact-icon sprite sprite-icon-letter"></i>
-									<i class="contact-icon sprite sprite-icon-curve"></i>
-									<span class="contact-text">dan.steshenko@gmail.com</span>
-								</a>
-							</li>
-							<li>
-								<a class="contact contact-phone" href="tel:+7(812)458-81-70">
-									<i class="contact-icon sprite sprite-icon-phone"></i>
-									<i class="contact-icon sprite sprite-icon-curve"></i>
-									<span class="contact-text">+79006350363</span>
-								</a>
-							</li>
-							<li>
-								<a class="contact contact-skype" href="skype:profile_name?fireburn26">
-									<i class="contact-icon sprite sprite-icon-skype"></i>
-									<i class="contact-icon sprite sprite-icon-curve"></i>
-									<span class="contact-text">fireburn26</span>
-								</a>
-							</li>
-						</ul>
-					</div>
-
-					</aside><!-- end sidebar -->
-					</div><!-- end container -->
-					</div><!-- end container-fluid -->
-					//= ../template/footer.html
-					<script type="text/javascript" src="js/feedback/main.js"></script>
-				</body>
-			</html>
+			</div>
+			</header><!-- /header -->
+			<!--[if lt IE 7]>
+			<p class="chromeframe">Вы используете <strong>устаревший</strong> браузер. Пожалуйста <a href="http://browsehappy.com/">обновите свой барузер</a> или <a href="http://www.google.com/chromeframe/?redirect=true">активируйте Google Chrome Frame</a> для корректного отображения сайта.</p>
+			<![endif]-->
+			<div class="container-fluid">
+				<div class="container cf">
+					<main class="content fr">
+					<section class="card feedback">
+						<div class="wrapper-title">
+							<h2 class="title-info">У вас интересный проект? Напишите мне</h2>
+						</div>
+						<div class="info">
+							<div class="form-wrapper">
+								<form id="form-feedback" action="" method="" accept-charset="utf-8">
+									<div class="form-row">
+										<div class="left form-group">
+											<label for="name">Имя</label>
+											<input id="name" type="text" name="name" placeholder="Как к Вам обращаться">
+										</div>
+										<div class="right form-group">
+											<label for="email">Email</label>
+											<input id="email" type="text" name="email" placeholder="Куда мне писать">
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="message">Сообщение</label>
+										<textarea rows="8" name="message" id="message" placeholder="Кратко в чем суть"></textarea>
+									</div>
+									<div class="captcha-wrapper">
+										<div class="captcha">
+											<div class="g-recaptcha" data-sitekey="6Le3-hETAAAAAGEobmZu8Qnv0lluz2JeAX_Iyx0k"></div>
+										</div>
+									</div>
+									<div class="button-row cf">
+										<button class="btn-submit" id="submit-feedback" type="submit"><strong>Отправить</strong></button>
+										<button class="btn-reset" id="reset-feedback" type="reset"><strong>Очистить</strong></button>
+									</div>
+								</form>
+							</div>
+						</div>
+						</section><!-- end about -->
+						</main><!-- end content -->
+						<aside class="sidebar">
+							<nav class="main-nav">
+								<ul class="nav">
+									<li><a href="index.html" class="item"><h2 class="title-list">Обо мне</h2></a></li>
+									<li><a href="my-work.html" class="item"><h2 class="title-list">Мои Работы</h2></a></li>
+									<li><a href="feedback.html" class="item item-green item-active"><h2 class="title-list">Обратная связь</h2></a></li>
+								</ul>
+							</nav>
+							<div class="contacts">
+								<ul class="contacts-list">
+									<li class="item item-orange item-active"><h2 class="title-list">Контакты</h2></li>
+									<li>
+										<a class="contact contact-email" href="mailto:dan.steshenko@gmail.com">
+											<i class="contact-icon sprite sprite-icon-letter"></i>
+											<i class="contact-icon sprite sprite-icon-curve"></i>
+											<span class="contact-text">dan.steshenko@gmail.com</span>
+										</a>
+									</li>
+									<li>
+										<a class="contact contact-phone" href="tel:+7(812)458-81-70">
+											<i class="contact-icon sprite sprite-icon-phone"></i>
+											<i class="contact-icon sprite sprite-icon-curve"></i>
+											<span class="contact-text">+79006350363</span>
+										</a>
+									</li>
+									<li>
+										<a class="contact contact-skype" href="skype:profile_name?fireburn26">
+											<i class="contact-icon sprite sprite-icon-skype"></i>
+											<i class="contact-icon sprite sprite-icon-curve"></i>
+											<span class="contact-text">fireburn26</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<div class="social bottom">
+								<a href="https://www.facebook.com/profile.php?id=100009009076066" target="_blank"><i class="sprite sprite-icon-fb"></i></a>
+								<a href="http://vk.com/steshenkoden" target="_blank"><i class="sprite sprite-icon-vk"></i></a>
+								<a href="https://twitter.com/SteshenkoDan" target="_blank"><i class="sprite sprite-icon-tw"></i></a>
+								<a href="https://github.com/Dan-Ste" target="_blank"><i class="sprite sprite-icon-gh"></i></a>
+							</div>
+							</aside><!-- end sidebar -->
+							</div><!-- end container -->
+							</div><!-- end container-fluid -->
+							//= ../template/footer.html
+							<script type="text/javascript" src="js/feedback/main.js"></script>
+						</body>
+					</html>

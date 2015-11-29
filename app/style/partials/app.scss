@@ -134,3 +134,23 @@ strong, h1, h2, h3, h4, h5, h6  {
 		}
 	}
 }
+
+.social {
+	padding: 25px 0;
+	display: inline-block;
+	vertical-align: middle;
+	a {
+		margin-right: 10px;
+		&:last-child {
+			margin: 0;
+		}
+		i {
+			vertical-align: bottom;
+			display: inline-block;
+		}
+	}
+	&.bottom {
+		display: none;
+		text-align: center;
+	}
+}

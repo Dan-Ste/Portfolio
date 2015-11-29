@@ -1,0 +1,20 @@
+.container {
+	width: auto;
+	max-width: 480px;
+	min-width: 320px;
+}
+.card .wrapper-title {
+	.title-info {
+		padding: 10px 5px;
+		text-align: center;
+	}
+}
+.social.bottom {
+	display: block;
+	a {
+		margin-right: 15px;
+		&:last-child {
+			margin: 0;
+		}
+	}
+}
