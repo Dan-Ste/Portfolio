@@ -5,6 +5,7 @@
 		<title>Стешенко Даниил</title>
 		<link rel="stylesheet" type="text/css" href="css/feedback/main.css">
 		<script src="js/vendor/modernizr.js"></script>
+		<script src='https://www.google.com/recaptcha/api.js'></script>
 	</head>
 	<body>
 //= ../template/header.html
@@ -32,13 +33,9 @@
 								<label for="message">Сообщение</label>
 								<textarea rows="8" name="message" id="message" placeholder="Кратко в чем суть"></textarea>
 							</div>
-							<div class="form-row">
-								<label class="label-captcha" for="captcha">Введите код, указанный на картинке</label>
-								<div class="left form-group">
-									<div class="fake-captcha"></div>
-								</div>
-								<div class="right form-group">
-									<input id="captcha" type="text" name="captcha" placeholder="Введите код">
+							<div class="captcha-wrapper">
+								<div class="captcha">
+										<div class="g-recaptcha" data-sitekey="6Le3-hETAAAAAGEobmZu8Qnv0lluz2JeAX_Iyx0k"></div>
 								</div>
 							</div>
 							<div class="button-row cf">

@@ -12,9 +12,6 @@
 		font-size: 14px;
 		font-size: 1.4rem;
 		margin-bottom: 8px;
-		&.label-captcha {
-			display: block;
-		}
 	}
 }
 .form-group {
@@ -42,35 +39,43 @@
 		color: #c7c6c6;
 		font-size: 12px;
 		font-size: 1.2rem;
-		line-height: 1;
+		line-height: 1.5;
 	}
 	:-moz-placeholder { /* Firefox 18- */
 		color: #c7c6c6;
 		font-size: 12px;
 		font-size: 1.2rem;
-		line-height: 1;
+		line-height: 1.5;
 	}
 	::-moz-placeholder {  /* Firefox 19+ */
 		color: #c7c6c6;
 		font-size: 12px;
 		font-size: 1.2rem;
-		line-height: 1;
+		line-height: 1.5;
 	}
 	:-ms-input-placeholder {
 		color: #c7c6c6;
 		font-size: 12px;
 		font-size: 1.2rem;
-		line-height: 1;
-	}
-	.fake-captcha {
-		height: 78px;
-		background: url(http://placepenguin.com/200/80) no-repeat center center;
-		box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.35),inset 0px 2px 2px 0px rgba(114, 112, 112, 0.1);
-		border-radius: 3px;
-		border: 1px solid #d6d4d3;
+		line-height: 1.5;
 	}
 }
 
+
+.captcha-wrapper {
+	text-align: center;
+	.label-captcha {
+		display: inline-block;
+		margin-bottom: 8px;
+	}
+	.captcha {
+		display: inline-block;
+		margin-bottom: 13px;
+		.g-recaptcha {
+			display: inline-block;
+		}
+	}
+}
 
 .form-row {
 	.form-group {

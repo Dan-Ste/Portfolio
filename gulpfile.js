@@ -19,6 +19,8 @@ var path = {
         html: 'dist/',
         js: {
             myWork: 'dist/js/myWork/',
+            index: 'dist/js/index/',
+            feedback: 'dist/js/feedback/'
         },
         css: {
             index: 'dist/css/index/',
@@ -31,12 +33,23 @@ var path = {
     app: { //исходники
         html: 'app/pages/*.html', // все файлы с расширением .html
         js: {
-            myWork: 'app/js/pages/my-work/main.js',//В стилях и скриптах нам понадобятся только main файлы
+            index: 'app/js/pages/index/main.js',
+            myWork: 'app/js/pages/my-work/main.js',
+            feedback: 'app/js/pages/feedback/main.js'
         },
         style: {
+            //Основные стили
             index: 'app/style/pages/index/main.scss',
             myWork: 'app/style/pages/my-work/main.scss',
-            feedback: 'app/style/pages/feedback/main.scss'
+            feedback: 'app/style/pages/feedback/main.scss',
+            //Стили для планшетов
+            indexTablet: 'app/style/pages/index/tablet.scss',
+            myWorkTablet: 'app/style/pages/my-work/tablet.scss',
+            feedbackTablet: 'app/style/pages/feedback/tablet.scss',
+            //Стили для телефонов
+            indexMobile: 'app/style/pages/index/mobile.scss',
+            myWorkMobile: 'app/style/pages/my-work/mobile.scss',
+            feedbackMobile: 'app/style/pages/feedback/mobile.scss'
         },
         img: 'app/img/**/*.+(png|jpg|jpeg|gif|svg)', //картинки всех расширений
         fonts: 'app/fonts/**/*.*'
@@ -81,7 +94,9 @@ var buildingScripts = function(pathTo) {
 };
 
 gulp.task('js:build', function () {
+    buildingScripts({app: path.app.js.index, dist: path.dist.js.index});//Скрипты для домашней страницы
     buildingScripts({app: path.app.js.myWork, dist: path.dist.js.myWork});//Скрипты для страницы работ
+    buildingScripts({app: path.app.js.feedback, dist: path.dist.js.feedback});//Скрипты для страницы обратной связи
 });
 
 // Собираем стили
@@ -97,9 +112,21 @@ var buildingStyles = function(pathTo) {
 };
 
 gulp.task('style:build', function () {
+    // Основные стили
     buildingStyles({app: path.app.style.index, dist: path.dist.css.index}); // Стили для домашней страницы
     buildingStyles({app: path.app.style.myWork, dist: path.dist.css.myWork}); // Стили для страницы работ
     buildingStyles({app: path.app.style.feedback, dist: path.dist.css.feedback}); // Стили для страницы обратной связи
+
+    // Стили для планшетов
+    buildingStyles({app: path.app.style.indexTablet, dist: path.dist.css.index});
+    buildingStyles({app: path.app.style.myWorkTablet, dist: path.dist.css.index});
+    buildingStyles({app: path.app.style.feedbackTablet, dist: path.dist.css.index});
+
+    //Стили для телефонов
+    buildingStyles({app: path.app.style.indexMobile, dist: path.dist.css.index});
+    buildingStyles({app: path.app.style.myWorkMobile, dist: path.dist.css.index});
+    buildingStyles({app: path.app.style.feedbackMobile, dist: path.dist.css.index});
+
 });
 
 gulp.task('image:build', function () {

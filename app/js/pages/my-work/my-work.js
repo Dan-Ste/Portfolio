@@ -38,6 +38,9 @@
 		$.each( formsForCheck, function(index, input) { //Убираем класс при фокусе
 			$(input).focus(function() {
 				$(this).removeClass("error");
+
+				$(this).qtip('destroy', true); //Убираем тултип
+
 				if( $(this).hasClass('file-upload-input') && $(this).val() ) {
 					$('#fake-input').removeClass("error");
 				}
@@ -74,6 +77,7 @@ jQuery(document).ready(function($) {
 	$('#add-project').click(function(e) {
 		e.preventDefault();
 		var modal = $('#modal-add-project').bPopup({
+			modalColor: 'rgba(114, 112, 112, 0.6)',
 			onClose: function() {
 				if($('qtip')) $('.qtip').hide();
 			}

@@ -1,0 +1,21 @@
+.qtip-default {
+	border: none;
+	border-width: 1px;
+	border-style: solid;
+	border-bottom-color: #cb6945;
+	border-right-color: #e69173;
+	border-left-color: #e69173;
+	border-top-color: #f19a7c;
+	border-radius: 5px;
+	box-shadow: 0px 2px 1px 0px rgba(9, 9, 9, 0.17),inset 0px 1px 0px 0px rgba(255, 255, 255, 0.25);
+	background-color: #ed997d;
+	background-image: linear-gradient( to top, rgb(211,118,84) 0%, rgb(243,162,135) 90%);
+	font-family: 'open_sanssemibold',sans-serif;
+	font-size: 12px;
+	font-size: 1.2rem;
+	color: #9a4e32;
+  text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.45);
+}
+.qtip-content {
+	padding: 7px 9px;
+}

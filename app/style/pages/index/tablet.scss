@@ -1,0 +1,38 @@
+@import "../../partials/header-tablet";
+@import "../../partials/app-tablet";
+
+
+//Content
+.card.about {
+	.info {
+		padding: 40px 37px 35px;
+	}
+	.wrapper-avatar {
+		width: 32%;
+	}
+	.whoami {
+		margin-left: 5px;
+		width: 66%;
+		.skills {
+			.left {
+				margin-right: 7px;
+			}
+			.right {
+				width: 225px;
+				margin-top: 2px;
+			}
+		}
+	}
+}
+.card .wrapper-title {
+	.title-info {
+		padding: 10px 0 10px 42px;
+	}
+}
+.card .info {
+	.list {
+		.descr {
+			width: 78%;
+		}
+	}
+}

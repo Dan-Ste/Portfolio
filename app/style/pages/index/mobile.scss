@@ -1,0 +1,52 @@
+@import "../../partials/header-tablet";
+
+
+//Content
+.container {
+	width: auto;
+	max-width: 480px;
+	min-width: 320px;
+}
+.card.about {
+	.wrapper-avatar {
+		width: 100%;
+		margin-bottom: 15px;
+		.avatar {
+			margin: 0 auto;
+		}
+	} 
+	.whoami {
+		width: 100%;
+		.skills {
+			.left {
+				margin-bottom: 5px;
+			}
+			.right {
+				float: none;
+				width: auto;
+				text-align: center;
+			}
+		}
+	}
+}
+.card .wrapper-title {
+	.title-info {
+		padding: 10px 0;
+		text-align: center;
+	}
+}
+.card .info {
+	padding: 18px;
+	.list {
+		.icon {
+			display: block;
+			margin: 0 auto;
+			margin-bottom: 15px;
+		}
+		.descr {
+			width: auto;
+			display: block;
+			text-align: center;
+		}
+	}
+}

@@ -12,7 +12,7 @@
 	vertical-align: top;
 	text-align: center;
 	width: 164px;
-	margin: -3px 15px 50px 15px;
+	margin: -3px 15px 40px 15px;
 	border-width: 1px;
 	border-style: solid;
 	border-right-color: #bbbbbb;
@@ -98,7 +98,7 @@
 
 
 .form-group {
-	margin-bottom: 18px;
+	margin-bottom: 8px;
 	label, input, textarea {
 		display: block;
 	}
@@ -116,7 +116,7 @@
 	}
 	textarea {
 		resize: none;
-		min-height: 180px;
+		min-height: 112px;
 	}
 	::-webkit-input-placeholder {
 		color: #c7c6c6;
@@ -230,6 +230,6 @@ label {
 }
 
 .error {
-  box-shadow: 0px 0px 2px 0 rgba(203, 105, 69, 0.7) !important;
+  box-shadow: 0px 0px 2px 1px rgba(203, 105, 69, 0.7) !important;
 }
 
