@@ -17,22 +17,14 @@ var gulp = require('gulp'),
 var path = {
 	dist: { //готовые после сборки файлы
 		html: 'dist/',
-		js: {
-			myWork: 'dist/js/myWork/',
-			index: 'dist/js/index/',
-			feedback: 'dist/js/feedback/'
-		},
+		js: 'dist/js/',
 		css: 'dist/css/',
 		img: 'dist/img/',
 		fonts: 'dist/fonts/'
 	},
 	app: { //исходники
 		html: 'app/pages/*.html', // все файлы с расширением .html
-		js: {
-			index: 'app/js/pages/index/main.js',
-			myWork: 'app/js/pages/my-work/main.js',
-			feedback: 'app/js/pages/feedback/main.js'
-		},
+		js: 'app/js/**/*.js',
 		style: 'app/style/*.scss',
 		img: 'app/img/**/*.+(png|jpg|jpeg|gif|svg)', //картинки всех расширений
 		fonts: 'app/fonts/**/*.*'
@@ -51,8 +43,8 @@ var config = {
 	server: {
 		baseDir: "./dist"
 	},
-	// online: true,
-	// tunnel: true,
+	online: true,
+	tunnel: true,
 	host: 'localhost',
 	port: 9000,
 	logPrefix: "burn"
@@ -67,19 +59,16 @@ gulp.task('html:build', function () {
 
 // Собираем скрипты
 var buildingScripts = function(pathTo) {
-  return gulp.src(pathTo.app) //Найдем наш main файл
+};
+
+gulp.task('js:build', function () {
+	gulp.src(['./' + path.app.js, './bower/modernizr/modernizr.js']) //Найдем наш main файл
 		.pipe(rigger()) //Прогоним через rigger
 		.pipe(sourcemaps.init()) //Инициализируем sourcemap
 		.pipe(uglify()) //Сожмем наш js
 		.pipe(sourcemaps.write()) //Пропишем карты
-		.pipe(gulp.dest(pathTo.dist)) //Выплюнем готовый файл в dist
+		.pipe(gulp.dest('dist/js/')) //Выплюнем готовый файл в dist
 		.pipe(reload({stream: true})); //И перезагрузим сервер
-};
-
-gulp.task('js:build', function () {
-	buildingScripts({app: path.app.js.index, dist: path.dist.js.index});//Скрипты для домашней страницы
-	buildingScripts({app: path.app.js.myWork, dist: path.dist.js.myWork});//Скрипты для страницы работ
-	buildingScripts({app: path.app.js.feedback, dist: path.dist.js.feedback});//Скрипты для страницы обратной связи
 });
 
 
@@ -112,18 +101,13 @@ gulp.task('fonts:build', function() {
 });
 
 
-gulp.task('vendor:build', function() {
-	gulp.src('bower/modernizr/modernizr.js')
-		.pipe(gulp.dest('dist/js/vendor/'));
-});
 
 gulp.task('build', [
 	'html:build',
 	'js:build',
 	'style:build',
 	'fonts:build',
-	'image:build',
-	'vendor:build'
+	'image:build'
 ]);
 
 gulp.task('watch', function(){
