@@ -24,7 +24,7 @@ var path = {
 	},
 	app: { //исходники
 		html: 'app/pages/*.html', // все файлы с расширением .html
-		js: 'app/js/**/*.js',
+		js: 'app/js/*.js',
 		style: 'app/style/*.scss',
 		img: 'app/img/**/*.+(png|jpg|jpeg|gif|svg)', //картинки всех расширений
 		fonts: 'app/fonts/**/*.*'
@@ -43,8 +43,8 @@ var config = {
 	server: {
 		baseDir: "./dist"
 	},
-	online: true,
-	tunnel: true,
+	// online: true,
+	// tunnel: true,
 	host: 'localhost',
 	port: 9000,
 	logPrefix: "burn"
@@ -57,9 +57,6 @@ gulp.task('html:build', function () {
 		.pipe(reload({stream: true})); //И перезагрузим наш сервер для обновлений
 });
 
-// Собираем скрипты
-var buildingScripts = function(pathTo) {
-};
 
 gulp.task('js:build', function () {
 	gulp.src(['./' + path.app.js, './bower/modernizr/modernizr.js']) //Найдем наш main файл
@@ -99,8 +96,6 @@ gulp.task('fonts:build', function() {
 	gulp.src(path.app.fonts)
 		.pipe(gulp.dest(path.dist.fonts))
 });
-
-
 
 gulp.task('build', [
 	'html:build',
