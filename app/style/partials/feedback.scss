@@ -4,7 +4,7 @@
 		padding-right: 0;
 	}
 }
-.form-wrapper {
+.form-wrapper-feedback {
 	width: 400px;
 	margin: 0 auto;
 	color: #727070;
@@ -14,8 +14,10 @@
 		margin-bottom: 8px;
 	}
 }
-.form-group {
-	margin-bottom: 18px;
+.form-wrrapper-add-project {
+	.form-group {
+		margin-bottom: 18px;
+	}
 	label, input, textarea {
 		display: block;
 	}
@@ -92,7 +94,7 @@
 }
 .button-row {
 	margin-top: 14px;
-	.btn-submit {
+	.btn-submit-feedback {
 		float: left;
 		width: 123px;
 		margin-left: 30px;
@@ -116,7 +118,7 @@
 			text-shadow: 0.5px 0.866px 0px rgba(255, 255, 255, 0.75);
 		}
 	}
-	.btn-reset {
+	.btn-reset-feedback {
 		float: right;
 		width: 123px;
 		margin-right: 30px;

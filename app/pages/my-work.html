@@ -4,9 +4,9 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Стешенко Даниил</title>
-		<link rel="stylesheet" type="text/css" href="css/my-work/main.css">
-		<link rel="stylesheet" type="text/css" media="(max-width: 1040px)" href="css/my-work/tablet.css">
-		<link rel="stylesheet" type="text/css" media="(max-width: 720px)" href="css/my-work/mobile.css">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<link rel="stylesheet" type="text/css" media="(max-width: 1040px)" href="css/tablet.css">
+		<link rel="stylesheet" type="text/css" media="(max-width: 720px)" href="css/mobile.css">
 		<script src="js/vendor/modernizr.js"></script>
 	</head>
 	<body>
@@ -35,7 +35,7 @@
 			</div>
 			</header><!-- /header -->
 			<!--[if lt IE 7]>
-			<p class="chromeframe">Вы используете <strong>устаревший</strong> браузер. Пожалуйста <a href="http://browsehappy.com/">обновите свой барузер</a> или <a href="http://www.google.com/chromeframe/?redirect=true">активируйте Google Chrome Frame</a> для корректного отображения сайта.</p>
+			<p class="chromeframe">Вы используете <strong>устаревший</strong> браузер. Пожалуйста <a href="http://browsehappy.com/">обновите свой браузер</a> или <a href="http://www.google.com/chromeframe/?redirect=true">активируйте Google Chrome Frame</a> для корректного отображения сайта.</p>
 			<![endif]-->
 			
 			<div class="container-fluid">
@@ -47,7 +47,7 @@
 						</div>
 						<div class="info" id="myWorks">
 							<div class="ticket-work">
-								<div class="figure"></div>
+								<div class="figure"><div class="more-info"><a href="#">Подробнее</a></div></div>
 								<div class="caption">
 									<h4>a-industry.ru</h4>
 									<div class="text">
@@ -56,7 +56,7 @@
 								</div>
 							</div>
 							<div class="ticket-work">
-								<div class="figure"></div>
+								<div class="figure"><div class="more-info"><a href="#">Подробнее</a></div></div>
 								<div class="caption">
 									<h4>домгазобетон.рф</h4>
 									<div class="text">
@@ -65,7 +65,7 @@
 								</div>
 							</div>
 							<div class="ticket-work">
-								<div class="figure"></div>
+								<div class="figure"><div class="more-info"><a href="#">Подробнее</a></div></div>
 								<div class="caption">
 									<h4>crmconsulting.biz</h4>
 									<div class="text">
@@ -74,7 +74,7 @@
 								</div>
 							</div>
 							<div class="ticket-work">
-								<div class="figure"></div>
+								<div class="figure"><div class="more-info"><a href="#">Подробнее</a></div></div>
 								<div class="caption">
 									<h4>landingsloft.ru</h4>
 									<div class="text">
@@ -83,7 +83,7 @@
 								</div>
 							</div>
 							<div class="ticket-work">
-								<div class="figure"></div>
+								<div class="figure"><div class="more-info"><a href="#">Подробнее</a></div></div>
 								<div class="caption">
 									<h4>yasnow.biz</h4>
 									<div class="text">
@@ -138,28 +138,28 @@
 							<div class="modal-add-project" id="modal-add-project">
 								<div class="popup-title"><h5>Добавление проекта</h5></div>
 								<div class="close-modal"><a href="#" class="b-close"><i class="sprite sprite-icon-close"></i></a></div>
-								<div class="form-wrapper">
+								<div class="form-wrapper-project">
 									<form id="form-project" action="" method="" accept-charset="utf-8">
 										<div class="form-group">
 											<label for="project-name">Название проекта</label>
-											<input id="project-name" data-tooltip-text="введите название" type="text" name="projectName" placeholder="Ввведите название">
+											<input id="project-name" class="for-valid" data-tooltip-text="введите название" type="text" name="projectName" placeholder="Ввведите название">
 										</div>
 										<div class="form-group file-upload cf">
 											<label for="project-image">Картинка проекта</label>
 											<label for="project-image">
 												<div class="fake-input" id="fake-input">Загрузите изображение</div>
 												<div class="upload-file-container">
-													<input class="file-upload-input" data-tooltip-text="изображение" id="project-image" type="file" name="img" placeholder="Загрузите изображение" accept="image/jpeg,image/png,image/gif">
+													<input id="project-image" class="file-upload-input for-valid" data-tooltip-text="изображение" type="file" name="img" placeholder="Загрузите изображение" accept="image/jpeg,image/png,image/gif">
 												</div>
 											</label>
 										</div>
 										<div class="form-group">
 											<label for="project-url">URL проекта</label>
-											<input id="project-url" data-tooltip-text="ссылка на проект" type="text" name="project-url" placeholder="Добавьте ссылку">
+											<input id="project-url" class="for-valid" data-tooltip-text="ссылка на проект" type="text" name="project-url" placeholder="Добавьте ссылку">
 										</div>
 										<div class="form-group">
 											<label for="project-description">Описание</label>
-											<textarea name="project-desrciption" data-tooltip-text="описание проекта" id="project-description" placeholder="Пара слов о Вашем проекте"></textarea>
+											<textarea id="project-decription" name="project-desrciption" data-tooltip-text="описание проекта" class="for-valid" placeholder="Пара слов о Вашем проекте"></textarea>
 										</div>
 										<div class="button-row">
 											<button class="btn-submit" id="submit-project" type="submit"><strong>Добавить</strong></button>
@@ -169,7 +169,8 @@
 								</div><!-- end modal -->
 								<!--
 								<i class="sprite sprite-icon-cloud"></i>
-								<i class="sprite sprite-icon-email"></i> -->
+								<i class="sprite sprite-icon-email"></i>
+								<i class="sprite sprite-icon-key"></i> -->
 								</div><!-- end container -->
 								</div><!-- end container-fluid -->
 								//= ../template/footer.html

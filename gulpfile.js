@@ -22,11 +22,7 @@ var path = {
 			index: 'dist/js/index/',
 			feedback: 'dist/js/feedback/'
 		},
-		css: {
-			index: 'dist/css/index/',
-			myWork: 'dist/css/my-work/',
-			feedback: 'dist/css/feedback/'
-		},
+		css: 'dist/css/',
 		img: 'dist/img/',
 		fonts: 'dist/fonts/'
 	},
@@ -37,20 +33,7 @@ var path = {
 			myWork: 'app/js/pages/my-work/main.js',
 			feedback: 'app/js/pages/feedback/main.js'
 		},
-		style: {
-			//Основные стили
-			index: 'app/style/pages/index/main.scss',
-			myWork: 'app/style/pages/my-work/main.scss',
-			feedback: 'app/style/pages/feedback/main.scss',
-			//Стили для планшетов
-			indexTablet: 'app/style/pages/index/tablet.scss',
-			myWorkTablet: 'app/style/pages/my-work/tablet.scss',
-			feedbackTablet: 'app/style/pages/feedback/tablet.scss',
-			//Стили для телефонов
-			indexMobile: 'app/style/pages/index/mobile.scss',
-			myWorkMobile: 'app/style/pages/my-work/mobile.scss',
-			feedbackMobile: 'app/style/pages/feedback/mobile.scss'
-		},
+		style: 'app/style/*.scss',
 		img: 'app/img/**/*.+(png|jpg|jpeg|gif|svg)', //картинки всех расширений
 		fonts: 'app/fonts/**/*.*'
 	},
@@ -99,38 +82,20 @@ gulp.task('js:build', function () {
 	buildingScripts({app: path.app.js.feedback, dist: path.dist.js.feedback});//Скрипты для страницы обратной связи
 });
 
-// Собираем стили
-var buildingStyles = function(pathTo) {
-  return gulp.src(pathTo.app) //Выберем наш main.scss
+
+gulp.task('style:build', function () {
+	gulp.src(path.app.style) //Выберем наш main.scss
 		.pipe(sourcemaps.init()) //То же самое что и с js
 		.pipe(sass()) //Скомпилируем
 		.pipe(prefixer()) //Добавим вендорные префиксы
 		.pipe(cssmin()) //Сожмем
 		.pipe(sourcemaps.write())
-		.pipe(gulp.dest(pathTo.dist)) //И в dist
+		.pipe(gulp.dest(path.dist.css)) //И в dist
 		.pipe(reload({stream: true}));
-};
-
-gulp.task('style:build', function () {
-	// Основные стили
-	buildingStyles({app: path.app.style.index, dist: path.dist.css.index}); // Стили для домашней страницы
-	buildingStyles({app: path.app.style.myWork, dist: path.dist.css.myWork}); // Стили для страницы работ
-	buildingStyles({app: path.app.style.feedback, dist: path.dist.css.feedback}); // Стили для страницы обратной связи
-
-	// Стили для планшетов
-	buildingStyles({app: path.app.style.indexTablet, dist: path.dist.css.index});
-	buildingStyles({app: path.app.style.myWorkTablet, dist: path.dist.css.myWork});
-	buildingStyles({app: path.app.style.feedbackTablet, dist: path.dist.css.feedback});
-
-	//Стили для телефонов
-	buildingStyles({app: path.app.style.indexMobile, dist: path.dist.css.index});
-	buildingStyles({app: path.app.style.myWorkMobile, dist: path.dist.css.myWork});
-	buildingStyles({app: path.app.style.feedbackMobile, dist: path.dist.css.feedback});
-
 });
 
 gulp.task('image:build', function () {
-	gulp.src(path.app.img) 
+	gulp.src(path.app.img)
 		.pipe(imagemin({ //Сжатие картинок
 			progressive: true,
 			svgoPlugins: [{removeViewBox: false}],

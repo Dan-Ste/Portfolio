@@ -1,55 +1,64 @@
 ;var validateProjectForm = (function(){
 	
-	var init = function(){
+	var obj = {
+		init: init
+	}
+
+	function init() {
 		$('#form-project').on('submit', check);
 		
-		$('.file-upload-input').change(function() { //Обрезаем лишнее у загружаемой фотографии
+		$('.file-upload-input').change(function() { //Обрезаем лишнее в пути у загружаемой фотографии
 			var sliceReg = /fakepath\\(.*)/;
 			var match = sliceReg.exec($(this).val());
 			$('#fake-input').html(match[1]).removeClass('error');
 		});
 	};
-	var check = function(e){
+
+	function check(e) {
 		e.preventDefault();
 
-		var formsForCheck = $('#form-project input, #form-project textarea');
+		var formsForCheck = $('.for-valid');
+		var fakeInput = $('#fake-input');
 		
 		$.each( formsForCheck, function(index, input) {//Для всех проверяемых полей
+			var $this = $(this)
 			if( !$(input).val() ) { //Если нет значения
-				$(this).addClass("error"); // Добавляем класс "error"
+				$this.addClass("error"); // Добавляем класс "error"
 
-				if( $(this).hasClass('file-upload-input') && !$(this).val() ) { // Исключение для фейкового инпута
-					$('#fake-input').addClass("error");
-					showTooltip( $('#fake-input'), $(this).data('tooltipText') );
+				if( $this.hasClass('file-upload-input') && !$this.val() ) { // Исключение для фейкового инпута
+					fakeInput.addClass("error");
+					showTooltip( fakeInput, $this.data('tooltipText') );
 				} else {
-					showTooltip( $(this), $(this).data('tooltipText') ); // Показываем тултип
+					showTooltip( $this, $this.data('tooltipText') ); // Показываем тултип
 				}
 			} else { //Если поле заполнено
-				$(this).removeClass("error"); //Удаляем класс
+				$this.removeClass("error"); //Удаляем класс
 
-				$(this).qtip('destroy', true); //И убираем тултип
+				$this.qtip('destroy', true); //И убираем тултип
 
-				if( $(this).hasClass('file-upload-input') ) {
-					$('#fake-input').removeClass("error");
+				if( $this.hasClass('file-upload-input') ) {
+					fakeInput.removeClass("error");
 				}
 			}
 		} );
 		
 		$.each( formsForCheck, function(index, input) { //Убираем класс при фокусе
+			var $this = $(this);
 			$(input).focus(function() {
-				$(this).removeClass("error");
+				$this.removeClass("error");
 
-				$(this).qtip('destroy', true); //Убираем тултип
+				$this.qtip('destroy', true); //Убираем тултип
 
-				if( $(this).hasClass('file-upload-input') && $(this).val() ) {
-					$('#fake-input').removeClass("error");
+				if( $this.hasClass('file-upload-input') && $this.val() ) {
+					fakeInput.removeClass("error");
 				}
 			})
 		});
 
+
 	};
 
-	var showTooltip = function(selectInput, text) {
+	function showTooltip(selectInput, text) {
 		selectInput.qtip({
 			content: text,
 			position: {
@@ -63,12 +72,9 @@
 				event: 'click',
 			},
 		});
-
 	}
 	
-	return {
-		init: init
-	};
+	return obj;
 }());
 
 
