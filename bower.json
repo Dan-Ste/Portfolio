@@ -17,6 +17,7 @@
     "normalize.css": "*",
     "modernizr": "2.8.3",
     "bPopup": "bpopup#~0.11.0",
-    "qtip2": "~2.2.1"
+    "qtip2": "~2.2.1",
+    "jquery-placeholder": "~2.3.0"
   }
 }
