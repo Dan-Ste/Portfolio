@@ -62,7 +62,7 @@ gulp.task('js:build', function () {
 	gulp.src(['./' + path.app.js, './bower/modernizr/modernizr.js']) //Найдем наш main файл
 		.pipe(rigger()) //Прогоним через rigger
 		// .pipe(sourcemaps.init()) //Инициализируем sourcemap
-		// .pipe(uglify()) //Сожмем наш js
+		.pipe(uglify()) //Сожмем наш js
 		// .pipe(sourcemaps.write()) //Пропишем карты
 		.pipe(gulp.dest('dist/js/')) //Выплюнем готовый файл в dist
 		.pipe(reload({stream: true})); //И перезагрузим сервер
@@ -71,11 +71,11 @@ gulp.task('js:build', function () {
 
 gulp.task('style:build', function () {
 	gulp.src(path.app.style) //Выберем наш main.scss
-		.pipe(sourcemaps.init()) //То же самое что и с js
+		// .pipe(sourcemaps.init()) //То же самое что и с js
 		.pipe(sass()) //Скомпилируем
 		.pipe(prefixer()) //Добавим вендорные префиксы
 		.pipe(cssmin()) //Сожмем
-		.pipe(sourcemaps.write())
+		// .pipe(sourcemaps.write())
 		.pipe(gulp.dest(path.dist.css)) //И в dist
 		.pipe(reload({stream: true}));
 });

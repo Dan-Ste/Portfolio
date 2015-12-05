@@ -16,18 +16,18 @@
 		display: inline-block;
 		vertical-align: middle;
   }
-  .signIn {
+  .sign-in {
 		font-family: 'open_sansbold', sans-serif;
 		font-weight: normal;
 		font-style: normal;
-		a {
+		display: inline-block;
+		.lock {
 			display: inline-block;
 			margin: 19.2px 0;
-			i, span {
+			padding-left: 25px;
+			.lock-text {
 				display: inline-block;
 				vertical-align: middle;
-			}
-			span {
 				text-transform: uppercase;
 				color: #9c9c9c;
 				font-weight: 900;
