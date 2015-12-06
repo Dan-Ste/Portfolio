@@ -139,8 +139,11 @@ strong, h1, h2, h3, h4, h5, h6  {
 	padding: 25px 0;
 	display: inline-block;
 	vertical-align: middle;
-	.social-link {
+	.social-list {
+		display: inline-block;
 		margin-right: 10px;
+	}
+	.social-link {
 		text-indent: 100%; //Text indent trick
 		white-space: nowrap;
 		overflow: hidden;
@@ -152,4 +155,30 @@ strong, h1, h2, h3, h4, h5, h6  {
 		display: none;
 		text-align: center;
 	}
+}
+
+.icon {
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 40px;
+	width: 53px;
+	height: 55px;
+	border-radius: 50%;
+	box-shadow: inset 0px -1px 0px 0px rgba(255, 255, 255, 0.6),inset 1px 1px 0px 0px rgba(199, 199, 199, 0.75);
+}
+
+.icon-case {
+	background: rgb(191, 191, 191), url(../img/icon-case.png) no-repeat 50% 50%;
+}
+.icon-pen {
+	background: rgb(191, 191, 191), url(../img/icon-pen.png) no-repeat 50% 50%;
+}
+.icon-graduate {
+	background: rgb(191, 191, 191), url(../img/icon-graduate.png) no-repeat 50% 50%;
+}
+.icon-file {
+	background: rgb(191, 191, 191), url(../img/icon-file.png) no-repeat 50% 50%;
+}
+.icon-picture {
+	background: rgb(191, 191, 191), url(../img/icon-picture.png) no-repeat 50% 50%;
 }
