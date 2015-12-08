@@ -131,6 +131,10 @@ strong, h1, h2, h3, h4, h5, h6  {
 			line-height: 0.917;
 			text-align: left;
 			text-shadow: 0px 1px 1px #666565;
+			&.regular {
+				font-family: open_sansregular, sans-serif;
+				font-weight: 400;
+			}
 		}
 	}
 }
@@ -166,19 +170,23 @@ strong, h1, h2, h3, h4, h5, h6  {
 	border-radius: 50%;
 	box-shadow: inset 0px -1px 0px 0px rgba(255, 255, 255, 0.6),inset 1px 1px 0px 0px rgba(199, 199, 199, 0.75);
 }
-
 .icon-case {
+	background: url(../img/icon-case.png) no-repeat 50% 50%;
 	background: rgb(191, 191, 191), url(../img/icon-case.png) no-repeat 50% 50%;
 }
 .icon-pen {
+	background: url(../img/icon-pen.png) no-repeat 50% 50%;
 	background: rgb(191, 191, 191), url(../img/icon-pen.png) no-repeat 50% 50%;
 }
 .icon-graduate {
+	background: url(../img/icon-graduate.png) no-repeat 50% 50%;
 	background: rgb(191, 191, 191), url(../img/icon-graduate.png) no-repeat 50% 50%;
 }
 .icon-file {
+	background: url(../img/icon-file.png) no-repeat 50% 50%;
 	background: rgb(191, 191, 191), url(../img/icon-file.png) no-repeat 50% 50%;
 }
 .icon-picture {
+	background: url(../img/icon-picture.png) no-repeat 50% 50%;
 	background: rgb(191, 191, 191), url(../img/icon-picture.png) no-repeat 50% 50%;
 }
