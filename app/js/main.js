@@ -1,4 +1,4 @@
-;var validateProjectForm = (function() {
+;var validateForm = (function() {
 	
 	var obj = {
 		init: init
@@ -16,11 +16,11 @@
 		var inputsForCheck = $('.for-valid');
 		var fakeInput = $('#fake-input');
 
-		for (var i = 0, l = inputsForCheck.length; i < l; i++) { //Для всех проверяемых полей
+		for (var i = 0, l = inputsForCheck.length; i < l; i++) { // Для всех проверяемых полей
 			
 			var $input = $(inputsForCheck[i]);
 
-			if( !$input.val() ) { //Если нет значения
+			if( !$input.val() ) { // Если нет значения
 				$input.addClass("error"); // Добавляем класс "error"
 
 				if( $input.hasClass('file-upload-input') && !$input.val() ) { // Исключение для фейкового инпута
@@ -29,9 +29,9 @@
 				} else {
 					showTooltip( $input, $input.data('tooltipText'), $input.data('my'), $input.data('at') ); // Показываем тултип
 				}
-			} else { //Если поле заполнено
+			} else { // Если поле заполнено
 
-				$input.removeClass("error").qtip('destroy', true); //Удаляем error класс и убираем тултип
+				$input.removeClass("error").qtip('destroy', true); // Удаляем error класс и убираем тултип
 
 				if( $input.hasClass('file-upload-input') ) {
 					fakeInput.removeClass("error").qtip('destroy', true);
@@ -66,7 +66,7 @@
 		});
 	}
 
-	function slicePhotoPath() {  //Обрезаем лишнее в пути у загружаемой фотографии
+	function slicePhotoPath() {  // Обрезаем лишнее в пути у загружаемой фотографии
 		var sliceReg = /fakepath\\(.*)/;
 		var match = sliceReg.exec($(this).val());
 		$('#fake-input').html(match[1]).removeClass('error');
@@ -79,9 +79,9 @@
 
 jQuery(document).ready(function($) {
 
-	$('#add-project').click(function(e) {
+	$('#add-project').on("click", function(e) {
 		e.preventDefault();
-		var modal = $('#modal-add-project').bPopup({
+		$('#modal-add-project').bPopup({
 			modalColor: 'rgba(114, 112, 112, 0.6)',
 			onClose: function() {
 				if($('qtip')) $('.qtip').hide();
@@ -90,11 +90,11 @@ jQuery(document).ready(function($) {
 	});
 	
 
-	$('#burger-menu').click(function(e) {
+	$('#burger-menu').on('click', function(e) {
 		$('#burger-nav').toggle();
 	});
 
 	$('input, textarea').placeholder();
 
-	validateProjectForm.init();
+	validateForm.init();
 });
